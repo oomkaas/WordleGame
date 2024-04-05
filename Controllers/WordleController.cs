@@ -34,9 +34,9 @@ namespace WordleGame.Controllers
             if (string.IsNullOrWhiteSpace(word))
                 return BadRequest("Invalid input: word cannot be empty.");
 
-            var normalizedWord = word.Trim().ToLower();
+            var lowerWord = word.ToLower();
 
-            if (!wordList.Contains(normalizedWord))
+            if (!wordList.Contains(lowerWord))
                 return BadRequest($"{word} is an invalid word: {word} is not in the word list.");
 
             return Ok($"{word} is a valid word!");
