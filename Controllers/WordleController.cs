@@ -20,12 +20,17 @@ namespace WordleGame.Controllers
             // Instantiate random number generator using system-supplied value as seed.
             var random = new Random();
             // Generate random indexes for types of sports
-            var randomIndex = random.Next(wordList.Length);
+            var randomIndex = random.Next(wordList.Length);                                         
             var randomWord = wordList[randomIndex];
-            //returns random word from predefined list
+            //returns random word from predefined list                                          
             return Ok($"Generated word: {randomWord}");
         }
 
+                                                                                        /**
+                                                                                         * code attribution
+                                                                                         * this code was adapted from Microsoft Learn
+                                                                                         * https://learn.microsoft.com/en-us/dotnet/api/system.random?view=net-8.0
+                                                                                         */
         [HttpPost]
         [Route("checkWord")]
         public IActionResult CheckWord([FromBody] string word)
