@@ -1,5 +1,4 @@
 # WordleGame
-Testing
 Testing was documented via Swagger
 When generateWord is executed, a random word from the predefined list of sports is chosen and displayed
 
